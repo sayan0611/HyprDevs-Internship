@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/product-sans');
+
+:root {
+    --primary-color: #0F172A;
+    --secondary-color: #182233;
+    --accent-color: #38BDF8;
+    --button-color: #8251CF;
+    --input-border-color: rgba(0, 0, 0, 0.2);
+    --input-focus-color: var(--accent-color);
+    --border: rgba(255,255,255,0.18)
+    --background-color: #F5F5F5;
+    --bg-img: url('https://static.vecteezy.com/system/resources/previews/005/437/951/original/bright-misty-night-in-forest-with-deer-and-crescent-moon-vector.jpg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-img);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+#main {
+    width: 400px;
+    padding: 30px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h2.user-name {
+    color: var(--accent-color);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.user-bio {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button, .register-button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-button:hover, .register-button:hover {
+    background: var(--accent-color);
+}
+
+#login, #Reg {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1 {
+    color: var(--accent-color);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+    border-color: var(--input-focus-color);
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #FFFFFF;
+    padding: 0 5px;
+    font-size: 14px;
+    color: var(--secondary-color);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: var(--input-focus-color);
+}
+
+.input-field input::placeholder{
+    color: #dadada;
+}
+.form button {
+    padding: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background: var(--accent-color);
+}
+
+/* card of userDetailsCard */
+.parent-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    display: none;
+}
+
+.parent-container .glassmorphism-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF; /* Avoiding black font */
+}
+
+.parent-container .glassmorphism-card .profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid var(--accent-color); /* Add a border with the accent color */
+}
+
+.parent-container .glassmorphism-card .input-field {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.parent-container .glassmorphism-card .input-field h2 {
+    font-size: 18px;
+    color: #CCCCCC; /* Avoiding black font */
+    margin-bottom: 10px;
+}
+
+.parent-container .glassmorphism-card .input-field h4 {
+    font-size: 16px;
+    color: #FFFFFF; /* Text color */
+    margin-top: 0;
+}

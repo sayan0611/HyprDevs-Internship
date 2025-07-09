@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and registration </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <h2 class="user-name">Welcome!</h2>
+            <p class="user-bio">Please login or register below.</p>
+            <div class="user-actions">
+                <button class="login-button" onclick="showLogin()">Login</button>
+                <button class="register-button" onclick="showRegister()">Register</button>
+            </div>
+        </div>
+        <div id="login">
+            <form class="form">
+                <h1>Login</h1>
+                <div class="input-field">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <button type="button" onclick="goHome()">Home</button>
+            </form>
+        </div>
+        <div id="Reg">
+            <form class="form">
+                <h1>Signup</h1>
+                <div class="input-field">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <button type="button" onclick="goHome()">Home</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- userDetailsCard -->
+    <div class="parent-container">
+        <div class="glassmorphism-card">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            </div>
+            <div class="input-field">
+                <h2>Username</h2>
+                <h4 id="username-display"></h4>
+            </div>
+            <div class="input-field">
+                <h2>Password</h2>
+                <h4 id="password-display"></h4>
+            </div>
+            <button type="button" onclick="goHome()">Home</button>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
